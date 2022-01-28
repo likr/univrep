@@ -1,0 +1,31 @@
+{
+  "name": "unirep",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/likr/unirep.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/likr/unirep/issues"
+  },
+  "homepage": "https://github.com/likr/unirep#readme",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.1.4",
+    "prettier": "^2.5.1",
+    "vite": "^2.7.13"
+  },
+  "dependencies": {
+    "d3": "^7.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
