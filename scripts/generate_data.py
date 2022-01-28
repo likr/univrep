@@ -26,11 +26,10 @@ def main():
     sonar = Sonar()
     result = {
         'dates': ts,
-        'classes': ['positive', 'negative'],
         'universities': []
     }
     for university, items in itertools.groupby(data, lambda item: item['university']):
-        count = {t: [0, 0] for t in ts}
+        count = {t: 0 for t in ts}
         for item in items:
             t = datetime.datetime\
                 .strptime(item['published'], "%a, %d %b %Y %H:%M:%S %Z")\
@@ -38,10 +37,8 @@ def main():
             if t not in count:
                 continue
             negpos = sonar.ping(text=item['title'])
-            if negpos['top_class'] == 'positive':
-                count[t][0] += 1
             if negpos['top_class'] == 'negative':
-                count[t][1] += 1
+                count[t] += 1
         result['universities'].append({
             'name': university,
             'count': [count[t] for t in ts],
