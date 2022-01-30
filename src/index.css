@@ -5,3 +5,121 @@ body {
 html {
   background-color: #000;
 }
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fff;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: solid 1px #ccc;
+}
+
+header {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+
+header .title {
+  padding: 0.8rem 0;
+  border-bottom: solid 1px #888;
+  background-color: #000;
+  text-align: center;
+}
+
+header .title h1 {
+  display: inline;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+}
+
+header .title button {
+  display: inline;
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+header .description {
+  padding: 0.8rem 2rem;
+  border-bottom: solid 1px #444;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+header .description p {
+  margin: 0.5rem;
+  color: #eee;
+}
+
+header .description .universities {
+  padding-left: 8px;
+}
+
+header .description div {
+  text-align: center;
+}
+
+header .description button {
+  margin-top: 10px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+svg {
+  cursor: grab;
+}
+
+svg.grabbing {
+  cursor: grabbing;
+}
+
+svg circle {
+  cursor: pointer;
+}
+
+svg text {
+  font-family: "Noto Serif JP", serif;
+  user-select: none;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.show-mobile {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-device-width: 800px) {
+  header .description {
+    padding: 0 0 0.8rem 0;
+    text-align: left;
+  }
+
+  .show-mobile {
+    display: block;
+  }
+}
